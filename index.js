@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+'use strict';
+
 const path = require('path');
 const chalk = require('chalk');
 const argv = require('yargs').argv;

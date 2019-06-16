@@ -1,5 +1,5 @@
 {
-  "name": "boiler",
+  "name": "vanilla",
   "version": "1.0.0",
   "description": "A boilerplate generator for vanilla javascript projects",
   "main": "index.js",
@@ -17,5 +17,8 @@
     "chalk": "^2.4.2",
     "handlebars": "^4.1.2",
     "yargs": "^13.2.4"
+  },
+  "bin": {
+    "vanilla": "./index.js"
   }
 }
