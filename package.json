@@ -1,8 +1,8 @@
 {
   "name": "vanilla-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A boilerplate generator for vanilla javascript projects",
-  "main": "index.js",
+  "main": "build/vanilla.js",
   "scripts": {
     "build": "backpack build",
     "start": "node src/index.js",

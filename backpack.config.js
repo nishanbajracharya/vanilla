@@ -10,6 +10,8 @@ module.exports = {
       raw: true,
     }));
 
+    config.devtool = false;
+
     return config;
   },
 };
