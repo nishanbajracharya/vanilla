@@ -1,5 +1,6 @@
-const argv = require('yargs').argv;
 const path = require('path');
+const chalk = require('chalk');
+const argv = require('yargs').argv;
 
 const write = require('./src/write');
 
@@ -40,4 +41,10 @@ function parseArguments(args = argv, requiredArguments = ARGUMENT_PROPS, default
 
 const args = parseArguments();
 
-write(args);
+write(args, function success() {
+  console.log(chalk.green('Successfully created project!'));
+  console.log(args.output);
+}, function error(err) {
+  console.log(chalk.red(`Couldn't create project.`));
+  console.log(err.message);
+});
