@@ -11,7 +11,7 @@ const HTML = `
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  {{body}}
+  {{{body}}}
   <script src="js/script.js"></script>
 </body>
 </html>
@@ -19,12 +19,23 @@ const HTML = `
 
 const CSS = `
 /* Base CSS File */
-{{body}}
+{{{body}}}
 `;
 
 const JS = `
 // Base JS File
-{{body}}
+{{{body}}}
+`;
+
+const EDITOR_CONFIG = `
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = true
 `;
 
 const html = handlebars.compile(HTML);
@@ -35,7 +46,8 @@ module.exports = {
   source: {
     HTML,
     CSS,
-    JS
+    JS,
+    EDITOR_CONFIG,
   },
   html,
   css,
