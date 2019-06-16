@@ -1,6 +1,6 @@
 {
   "name": "vanilla-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A boilerplate generator for vanilla javascript projects",
   "main": "build/vanilla.js",
   "scripts": {
@@ -16,6 +16,7 @@
   "author": "Nishan Bajracharya <nisbaj11@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "backpack-core": "^0.8.3",
     "chalk": "^2.4.2",
     "handlebars": "^4.1.2",
     "yargs": "^13.2.4"
@@ -24,7 +25,6 @@
     "vanilla": "./build/vanilla.js"
   },
   "devDependencies": {
-    "backpack-core": "^0.8.3",
     "del-cli": "^2.0.0"
   }
 }
