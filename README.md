@@ -4,7 +4,13 @@ A vanilla Javascript project boilerplate generator.
 
 ## Installation
 
-Clone this repository.
+### Install from NPM
+
+```sh
+$ npm i -g vanilla-cli
+```
+
+### Clone this repository
 
 ```sh
 $ git clone git@github.com:nishanbajracharya/vanilla.git
@@ -16,7 +22,7 @@ In order to use the tool as a global command, link the package.
 $ npm link
 ```
 
-**Note:** This will create a cli command named `vanilla` which can be used globally.
+**Note:** This will create a cli command named `vanilla` which can be used globally. If `npm link` is not run, the `vanilla` command will have to be replaced with `node build/vanilla.js`.
 
 ## Usage
 
@@ -56,8 +62,6 @@ This will create the boilerplate in the path specified. Here specifying `--proje
 | `htmlBody`  | Body of html document                                                          |
 | `cssBody`   | Body of css document                                                           |
 | `jsBody`    | Body of js document                                                            |
-
-**Note:** If `npm link` is not run, the `vanilla` command will have to be replaced with `node src/index.js`.
 
 ### Usage with `npm start`
 
