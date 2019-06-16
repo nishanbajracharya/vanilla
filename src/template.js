@@ -1,4 +1,6 @@
-const HTML_TEMPLATE = `
+const handlebars = require('handlebars');
+
+const HTML = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,3 +16,28 @@ const HTML_TEMPLATE = `
 </body>
 </html>
 `;
+
+const CSS = `
+/* Base CSS File */
+{{body}}
+`;
+
+const JS = `
+// Base JS File
+{{body}}
+`;
+
+const html = handlebars.compile(HTML);
+const css = handlebars.compile(CSS);
+const js = handlebars.compile(JS);
+
+module.exports = {
+  source: {
+    HTML,
+    CSS,
+    JS
+  },
+  html,
+  css,
+  js
+};
