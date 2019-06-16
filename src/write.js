@@ -5,15 +5,15 @@ const template = require('./template');
 function write(props, success, error) {
   const html = template.html({
     title: props.htmlTitle,
-    body: props.htmlBody,
+    body: props.htmlBody
   });
 
   const css = template.css({
-    body: props.cssBody,
+    body: props.cssBody
   });
 
   const js = template.js({
-    body: props.jsBody,
+    body: props.jsBody
   });
 
   const output = props.output;
@@ -36,7 +36,7 @@ function write(props, success, error) {
     fs.writeFileSync(output + '/js/script.js', js);
 
     success && success();
-  } catch(err) {
+  } catch (err) {
     error && error(err);
   }
 }

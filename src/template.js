@@ -101,9 +101,9 @@ module.exports = {
     CSS,
     JS,
     RESET,
-    EDITOR_CONFIG,
+    EDITOR_CONFIG
   },
   html,
   css,
-  js,
+  js
 };

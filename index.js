@@ -10,7 +10,7 @@ const ARGUMENT_PROPS = [
   'cssBody',
   'project',
   'htmlBody',
-  'htmlTitle',
+  'htmlTitle'
 ];
 
 const DEFAULT_ARGUMENTS = {
@@ -19,10 +19,14 @@ const DEFAULT_ARGUMENTS = {
   cssBody: '',
   project: 'vanilla',
   htmlTitle: 'Document',
-  htmlBody: '<p>Vanilla Boilerplate</p>',
+  htmlBody: '<p>Vanilla Boilerplate</p>'
 };
 
-function parseArguments(args = argv, requiredArguments = ARGUMENT_PROPS, defaultArguments = DEFAULT_ARGUMENTS) {
+function parseArguments(
+  args = argv,
+  requiredArguments = ARGUMENT_PROPS,
+  defaultArguments = DEFAULT_ARGUMENTS
+) {
   const parsedArguments = {};
 
   for (let i = 0; i < requiredArguments.length; i++) {
@@ -31,7 +35,7 @@ function parseArguments(args = argv, requiredArguments = ARGUMENT_PROPS, default
   }
 
   if (!parsedArguments.output) {
-    parsedArguments.output = process.cwd() + '/' + parsedArguments.project
+    parsedArguments.output = process.cwd() + '/' + parsedArguments.project;
   }
 
   parsedArguments.output = path.resolve(parsedArguments.output);
@@ -41,10 +45,14 @@ function parseArguments(args = argv, requiredArguments = ARGUMENT_PROPS, default
 
 const args = parseArguments();
 
-write(args, function success() {
-  console.log(chalk.green('Successfully created project!'));
-  console.log(args.output);
-}, function error(err) {
-  console.log(chalk.red(`Couldn't create project.`));
-  console.log(err.message);
-});
+write(
+  args,
+  function success() {
+    console.log(chalk.green('Successfully created project!'));
+    console.log(args.output);
+  },
+  function error(err) {
+    console.log(chalk.red(`Couldn't create project.`));
+    console.log(err.message);
+  }
+);
