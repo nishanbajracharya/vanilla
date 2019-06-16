@@ -1,6 +1,6 @@
 {
   "name": "vanilla-cli",
-  "version": "1.0.0",
+  "version": "0.9.0",
   "description": "A boilerplate generator for vanilla javascript projects",
   "main": "index.js",
   "scripts": {
