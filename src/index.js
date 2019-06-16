@@ -1,11 +1,8 @@
-#!/usr/bin/env node
-'use strict';
-
 const path = require('path');
 const chalk = require('chalk');
 const argv = require('yargs').argv;
 
-const write = require('./src/write');
+const write = require('./write');
 
 const ARGUMENT_PROPS = [
   'output',

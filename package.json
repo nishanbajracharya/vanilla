@@ -4,7 +4,9 @@
   "description": "A boilerplate generator for vanilla javascript projects",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "build": "backpack build",
+    "start": "node src/index.js",
+    "prebuild": "del build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -19,6 +21,10 @@
     "yargs": "^13.2.4"
   },
   "bin": {
-    "vanilla": "./index.js"
+    "vanilla": "./build/vanilla.js"
+  },
+  "devDependencies": {
+    "backpack-core": "^0.8.3",
+    "del-cli": "^2.0.0"
   }
 }
