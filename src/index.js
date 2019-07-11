@@ -45,8 +45,6 @@ function parseArguments(
 
 const args = parseArguments();
 
-console.log(args);
-
 write(
   args,
   function success() {
