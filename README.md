@@ -40,6 +40,8 @@ This will create a new boilerplate with the default folder name, `vanilla`, in t
 
 ```
 $ vanilla --project=projectName
+OR
+$ vanilla projectName
 ```
 
 This will create the boilerplate in `projectName` folder in current working directory.

@@ -31,7 +31,7 @@ function parseArguments(
 
   for (let i = 0; i < requiredArguments.length; i++) {
     const prop = requiredArguments[i];
-    parsedArguments[prop] = args[prop] || defaultArguments[prop];
+    parsedArguments[prop] = args[prop] || argv._[0] || defaultArguments[prop];
   }
 
   if (!parsedArguments.output) {
@@ -44,6 +44,8 @@ function parseArguments(
 }
 
 const args = parseArguments();
+
+console.log(args);
 
 write(
   args,
