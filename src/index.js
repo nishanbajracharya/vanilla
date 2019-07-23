@@ -31,7 +31,7 @@ function parseArguments(
 
   for (let i = 0; i < requiredArguments.length; i++) {
     const prop = requiredArguments[i];
-    if (props === 'project') {
+    if (prop === 'project') {
       parsedArguments[prop] = args[prop] || argv._[0] || defaultArguments[prop];
 
       continue;
